@@ -163,7 +163,7 @@ void modificar() {
 	system("cls");
 	cout << "Introduzca la hora de la cita en formato 24 horas. (Ejemplo: 13:35)" << endl;
 	cin >> auxiliar->hora;
-p:
+	l:
 	system("cls");
 	int t = 0;
 	cout << "Elija el tratamiento deseado." << endl << endl;
@@ -193,10 +193,12 @@ p:
 		auxiliar->descripcion = "Quitar un diente, por lo general a causa de alguna enfermedad o traumatismo o porque hay dientes amontonados.";
 		auxiliar->unitario = 750;
 		break;
-	defautl:
+	default:
 		system("cls");
 		cout << "Introduzca una opcion valida";
-		goto p;
+		system("pause");
+		goto l;
+		break;
 	}
 	system("cls");
 	cout << "Introduzca cantidad de tratamiento " << endl;
@@ -275,11 +277,10 @@ e:
 	case 5:
 		exit(0);
 		break;
-	defautl:
+	default:
 		system("cls");
 		cout << "Introduzca una respuesta valida" << endl;
 		system("pause");
 		goto e;
 	}
-
 }
