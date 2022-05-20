@@ -89,7 +89,8 @@ void imprimir_citas() {
 	auxiliar = primera_cita;
 	if (!auxiliar) {
 		system("cls");
-		cout << "No hay citas registradas";
+		cout << "No hay citas registradas"<<endl;
+		system("pause");
 	}
 	else {
 		int j = 0;
@@ -261,6 +262,7 @@ e:
 		system("cls");
 		cout << "Se mostraran las citas para que vea cual se quiere eliminar" << endl << endl;
 		system("pause");
+		system("cls");
 		imprimir_citas();
 		system("cls");
 		eliminar();
